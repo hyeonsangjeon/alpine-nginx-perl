@@ -1,6 +1,6 @@
 FROM nginx:1.13.3-alpine
-## alpine curl and wget aren't fully compatible, so we install them
-## here. gnupg is needed for Module::Signature.
+LABEL maintainer="wingnut0310 <wingnut0310@gmail.com>"
+
 RUN apk update && apk upgrade && apk add curl tar make gcc build-base wget gnupg bash 
 
 RUN mkdir -p /usr/src/perl
